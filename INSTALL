@@ -1,0 +1,9 @@
+Building Cheese
+
+See doc/readme-qt.rst for instructions on building Cheese QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Cheese.
+
+See doc/build-*.txt for instructions on building cheesed,
+the intended-for-services, no-graphical-interface, reference
+implementation of Cheese.
