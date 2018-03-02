@@ -28,10 +28,10 @@ AddEditAdrenalineNode::AddEditAdrenalineNode(QWidget *parent) :
     ui->aliasLineEdit->setPlaceholderText("Enter your Masternode alias");
     ui->addressLineEdit->setPlaceholderText("Enter your IP & port");
     ui->privkeyLineEdit->setPlaceholderText("Enter your Masternode private key");
-    ui->txhashLineEdit->setPlaceholderText("Enter your 2500 CHEESE TXID");
+    ui->txhashLineEdit->setPlaceholderText("Enter your 250,000 CHEESE TXID");
     ui->outputindexLineEdit->setPlaceholderText("Enter your transaction output index");
-    ui->rewardaddressLineEdit->setPlaceholderText("Enter a reward recive address");
-    ui->rewardpercentageLineEdit->setPlaceholderText("Input the % for the reward");
+    ui->rewardaddressLineEdit->setPlaceholderText("Enter a reward receive address");
+    ui->rewardpercentageLineEdit->setPlaceholderText("Enter the % for the reward");
 }
 
 AddEditAdrenalineNode::~AddEditAdrenalineNode()
