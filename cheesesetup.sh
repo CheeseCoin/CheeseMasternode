@@ -88,6 +88,7 @@ sleep 60
 echo '2 minutes left...'
 sleep 60
 echo '1 minutes left...'
+sleep 60
 ./cheesed getinfo
 echo 'Check the block number above to the current block height of the CheeseCoin blockchain to make sure your daemon is fully synced'
 sleep 1
