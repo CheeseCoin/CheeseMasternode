@@ -76,7 +76,7 @@ echo '*** Done 4/5 ***'
 sleep 1
 echo '*** Step 5/5 ***'
 sleep 1
-echo '*** Server Start also Wallet Sync ***'
+echo '*** Server Start and Wallet Sync ***'
 sleep 1
 ./cheesed -daemon
 echo 'Wait until the blockchain is synced to start your alias. This script will end in 5 minutes...'
