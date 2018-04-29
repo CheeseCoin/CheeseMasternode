@@ -23,7 +23,7 @@ echo '*** Step 2/5 ***'
 echo '*** Running updates and install required packages ***'
 sleep 1
 sudo apt-get install software-properties-common -y
-sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo apt-get update -y
 sudo apt-get install build-essential -y
 sudo apt-get install libtool -y
