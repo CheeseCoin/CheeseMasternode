@@ -14,7 +14,7 @@ echo 'Creating 2GB Swapfile'
 dd if=/dev/zero of=/mnt/mybtdxswap.swap bs=2M count=1000 >/dev/null 2>&1
 mkswap /mnt/mybtdxswap.swap >/dev/null 2>&1
 swapon /mnt/mybtdxswap.swap >/dev/null 2>&1
-echo 'Running updates and install required packages'
+echo 'Running updates and install required packages. Please wait...'
 sudo apt-get install software-properties-common -y >/dev/null 2>&1
 sudo add-apt-repository ppa:bitcoin/bitcoin -y >/dev/null 2>&1
 sudo apt-get update -y >/dev/null 2>&1
@@ -37,7 +37,7 @@ sudo apt-get install tmux -y >/dev/null 2>&1
 sudo apt-get install libgmp3-dev -y >/dev/null 2>&1
 sleep 1
 echo 'Downloading CheeseCoin Wallet'
-git clone https://github.com/CheeseCoin/CheeseMasternode makefile.unix >/dev/null 2>&1
+git clone https://github.com/CheeseCoin/CheeseMasternode >/dev/null 2>&1
 echo 'Cloning and Compiling CheeseCoin Wallet'
 echo 'THIS PROCESS WILL TAKE A LONG TIME WITHOUT NOTIFICATIONS ON THIS SCREEN! PLEASE BE PATIENT!'
 cd CheeseMasternode/src/leveldb && chmod 777 * && cd .. && make -f makefile.unix >/dev/null 2>&1
@@ -60,4 +60,4 @@ sleep 1
 echo 'USEFUL CHEESED COMMANDS'
 echo 'cheesed getinfo - This command can be used to check block height and other information'
 echo 'cheesed masternode status - This command can be used to see the status of your masternode. status 9 means running without issue'
-echo 'cheesed masternode debug - This command can be used if you do not get the status 9 from above. '
+echo 'cheesed masternode debug - This command can be used if you do not get the status 9 from above'
