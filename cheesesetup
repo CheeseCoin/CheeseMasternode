@@ -42,8 +42,7 @@ config()  {
 
 #This function will install the CHEESE wallet
 install_wallet()  {
-  if find /root/ -type d -name CheeseMasternode >/dev/null 2>&1
-  then
+  if [ -d "/root/CheeseMasternode" ]; then
     return 0
   fi
   echo "You do not have the $(tput setaf 3)CHEESE$(tput sgr0) wallet installed on this device"
