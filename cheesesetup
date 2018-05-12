@@ -60,7 +60,6 @@ install_wallet()  {
   for i in "${packages[@]}"; do
     if ! { sudo apt-get install "${packages[current]}" -y >/dev/null 2>&1 || echo E: update failed; } | grep -q '^[WE]:'; then
       echo "$(tput setaf 2)${packages[current]}$(tput sgr0) successfully installed or updated"
-      exit 1
     else
       echo "$(tput setaf 1)${packages[current]}$(tput sgr0) failed to install"
       exit 1
