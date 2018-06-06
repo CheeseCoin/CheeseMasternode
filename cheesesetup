@@ -89,6 +89,7 @@ add_nodes() {
     echo -e "rpcuser=$usrnam \nrpcpassword=$usrpas \nrpcport=$((rpcport+current)) \nlisten=1 \nserver=1 \ndaemon=1 \nrpcallowip=127.0.0.1 \n \nport=$((port+current)) \nmasternode=1 \nmasternodeaddr=$vpsip:$((port+current)) \nmasternodeprivkey=${mnkeys[$nodesadded]} \n" > /root/.Cheese$current/Cheese.conf
     /root/CheeseMasternode/src/cheesed -datadir=/root/.Cheese$current -config=/root/.Cheese$current/Cheese.conf -daemon >/dev/null 2>&1
     echo "alias cheesed$current='/root/CheeseMasternode/src/cheesed -datadir=/root/.Cheese$current -config=/root/.Cheese$current/Cheese.conf'" >> /root/.bashrc
+    sudo ufw allow $((port+current)) >/dev/null 2>&1
     nodesadded+=1
     current+=1
     sleep 2
